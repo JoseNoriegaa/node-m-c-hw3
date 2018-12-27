@@ -1,6 +1,6 @@
 # Pizza delivery - APP
 
-This is the homework assignment 3 of the course "[Node JS masterClass](https://pirple.thinkific.com/courses/the-nodejs-master-class)".
+This is the homework assignment 3 of the course "[Node JS Master Class](https://pirple.thinkific.com/courses/the-nodejs-master-class)".
 
 These are some features that I considered to make the project:
 - ECMAScript 6
@@ -64,7 +64,7 @@ These are some features that I considered to make the project:
 
 - Clone this repo
   ```console
-  $ git clone --single-branch -b hw3 https://github.com/JoseNoriegaa/node-js-master-class.git homeworkAssignment3 
+  $ git clone https://github.com/JoseNoriegaa/node-m-c-hw3.git
   ```
 - set the environment variables
   ```text
@@ -76,7 +76,7 @@ These are some features that I considered to make the project:
   ```
 - Run the proyect:
   ```console
-  $ cd homeworkAssignment3
+  $ cd node-m-c-hw3
   $ node index
   ```
 
