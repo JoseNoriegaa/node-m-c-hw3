@@ -16,7 +16,7 @@ const groupItems = (items) => {
   return groupData;
 }
 /**
- * This function render a table with all the products that the user has in his order.
+ * This function renders a table with all the products that the user has in his order.
  */
 const renderTableRows = () => {
   if (app.state.order.user) {
@@ -67,7 +67,7 @@ const renderTableRows = () => {
   }
 }
 /**
- * Delete a product item in the order
+ * Delete a product item from the order
  */
 async function deleteItem() {
   if (this.id) {
@@ -101,7 +101,7 @@ async function pay() {
   }
 }
 /**
- * Check up that all fields in the form are valid.
+ * Form validator
  */
 function validate() {
   let valid = true;
@@ -126,7 +126,7 @@ setTimeout(() => {
   renderTableRows();
 }, 100);
 
-// Check up if the user is already autenticated
+// Check if the user is already autenticated
 setInterval(() => {
   if (!app.state.auth.id || app.state.order.items.length <= 0) {
     window.location = '/';

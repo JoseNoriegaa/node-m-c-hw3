@@ -30,19 +30,19 @@ These are some features that I considered to make the project:
 #### USERS
 | Route | Method | Required Data | Optional Data | Description |
 |--|--|--|--|--|
-| /api/users | GET | none | none | Returns all registered users |
-| /api/user | GET | **queryString**: username | none | Returns a specified user by the username field.|
-| /api/user | POST | **body**: username, fullname, email, address, and password.| none | Create a new user |
-| /api/user | POST | **queryString**: username | **body**: fullname, email, address, and password. | this route updates a specific user by the username field, all the fields that are provided will be updated.|
+| /api/users | GET | none | none | Returns the registered users |
+| /api/user | GET | **queryString**: username | none | Returns a specific user by the username field.|
+| /api/user | POST | **body**: username, fullname, email, address, and password.| none | Creates a new user |
+| /api/user | POST | **queryString**: username | **body**: fullname, email, address, and password. | Updates a specific user by the username field, all the fields that are provided will be updated.|
 
 #### Products
 | Route | Method | Required Data | Optional Data | Description |
 |--|--|--|--|--|
-| /api/products | GET | **headers**: token; **queryString**: id | none | Get all items |
-| /api/product | GET | **headers**: token | none | Get a specified item by the id |
-| /api/product | POST | **headers**: token; **body**: name, price, description, currency, urlImage| none | Create a new item |
-| /api/product | PUT |  **headers**: token; **queryString**: id |  **body**: name, price, description, currency, urlImage | Update a specified item by the id |
-| /api/product | DELETE | **headers**: token; **queryString**: id | none | Delete a specified item by the id |
+| /api/products | GET | **headers**: token; **queryString**: id | none | Gets the items |
+| /api/product | GET | **headers**: token | none | Gets a specific item by the id |
+| /api/product | POST | **headers**: token; **body**: name, price, description, currency, urlImage| none | Creates a new item |
+| /api/product | PUT |  **headers**: token; **queryString**: id |  **body**: name, price, description, currency, urlImage | Updates a specific item by the id |
+| /api/product | DELETE | **headers**: token; **queryString**: id | none | Deletes a specific item by the id |
 
 #### Auth
 | Route | Method | Required Data | Optional Data | Description |
@@ -53,11 +53,11 @@ These are some features that I considered to make the project:
 #### Orders
 | Route | Method | Required Data | Optional Data | Description |
 |--|--|--|--|--|
-| /api/orders | GET | **headers**: token | none | Get all orders |
-| /api/order | GET | **headers**: token; **queryString**: username | none | Get all orders related to a user |
-| /api/order/item | POST | **headers**: token; **body**: username, productId, quantity | none | Add item to the order |
-| /api/order/item | DELETE | **headers**: token; **body**: username, productId | none | remove item to the order |
-| /api/order | DELETE | **headers**: token; **queryString**: username | none | Delete the order |
+| /api/orders | GET | **headers**: token | none | Gets the orders |
+| /api/order | GET | **headers**: token; **queryString**: username | none | Gets the orders related to a user |
+| /api/order/item | POST | **headers**: token; **body**: username, productId, quantity | none | Adds an item to a order |
+| /api/order/item | DELETE | **headers**: token; **body**: username, productId | none | Removes an item to a order |
+| /api/order | DELETE | **headers**: token; **queryString**: username | none | Deletes a order |
 | /api/order/pay | POST | **headers**: token, stripeSource; **queryString**: username | none | Order payment |
 
 # Run it locally
@@ -74,7 +74,7 @@ These are some features that I considered to make the project:
   MAILGUN_API_KEY=YOUR_MAILGUN_API_KEY
   MAINGUN_SENDER=Pizza App <postmaster@YOUR_MAILGUN_DOMAIN>
   ```
-- Run the proyect:
+- Run the project:
   ```console
   $ cd node-m-c-hw3
   $ node index

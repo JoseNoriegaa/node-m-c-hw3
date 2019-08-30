@@ -7,7 +7,7 @@ class AppConfig {
       products: [],
       order: {user: null, items: []},
     };
-    // get the app data when the window was loaded
+    // get the app data when window has loaded
     this.load();
   }
   async load() {
@@ -15,7 +15,7 @@ class AppConfig {
       const authSession = window.sessionStorage.getItem('auth');
       if (authSession) {
         Object.assign(this.state, { auth: JSON.parse(authSession) });
-        // Get the previous order data, if it exists
+        // Get the previous order data, if it exist
         await this.getOrder();
       }
     } catch (error) {

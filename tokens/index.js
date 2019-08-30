@@ -5,7 +5,7 @@
 const data = require('../lib/data');
 const helpers = require('../helpers');
 
-// Export the module that contains all the operations to manipulate the tokens
+// Export the module that contains the operations to manipulate the tokens
 module.exports = {
   async createToken({ username, email }) {
     try {
@@ -15,7 +15,7 @@ module.exports = {
       email = typeof email === 'string' && username.trim()
         ? email.trim() : false;
       if (username && email) {
-        // Create a token
+        // Create a new token
         const tokenDetails = {
           id: helpers.createRandomString(25),
           user: username,

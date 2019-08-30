@@ -1,5 +1,5 @@
 /**
- * File for helpers
+ * File for the helpers
  */
 // Dependencies
 const QueryString = require('querystring');
@@ -222,7 +222,7 @@ helpers.stripeCharge = (amount, currency, description, source, cb) => {
 };
 
 /**
- * This function convert the provided data to a Json Object if is possible,
+ * This function converts the provided data to a Json Object if is possible,
  * if it not is possible it returns the original data
  * @param {*} str payload to parse
  */
@@ -238,7 +238,7 @@ helpers.parseJsonToObject = (str) => {
   }
 };
 /**
- * This function convert the provided data to a Json Object if is possible,
+ * This function converts the provided data to a Json Object if is possible,
  * if it not is possible it returns the original data
  * @param {*} str payload to parse
  */
@@ -287,7 +287,7 @@ helpers.hash = (str) => {
   return false;
 };
 /**
- * This function validate if a string provided is a valid email
+ * This function validates if a string provided is a valid email
  * @param {String} email String that contains the Email to validate
  * @returns {Boolean}
  */
@@ -339,7 +339,7 @@ helpers.getTemplate = (templateName, data, cb) => {
     const templateDir = path.join(__dirname, '/../templates/');
     fs.readFile(templateDir + templateName + '.html', 'utf-8', (err, str) => {
       if (!err && str && str.length > 0) {
-        // Do interpolation on the string
+        // Interpolation on the string
         const finalString = helpers.interpolate(str, data);
         cb(false, finalString);
       } else {

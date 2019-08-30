@@ -31,7 +31,7 @@ const loginHandler = async (e) => {
   }
 }
 /**
- * Check that all fields in the form are valid
+ * Form validator
  */
 const validate = () => {
   // username field
